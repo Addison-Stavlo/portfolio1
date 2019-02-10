@@ -1,0 +1,101 @@
+@import "reset";
+@wideViewStart: 1100px;
+
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+
+  @media (max-width: @wideViewStart) {
+    flex-direction: column;
+  }
+}
+
+.nav-bar {
+  width: 30%;
+  background: rgb(25, 25, 25, 1);
+  @media (max-width: @wideViewStart) {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+}
+
+.main-container {
+  background: white;
+  width: 70%;
+  position: relative;
+  @media (max-width: @wideViewStart) {
+    width: 100%;
+  }
+}
+
+.area1 {
+  height: 100vh;
+
+  .my-name {
+    font-size: 5rem;
+    font-family: serif;
+    padding: 20vh 10vw;
+    font-weight: bold;
+    width: 50%;
+
+    h1 {
+      display: inline-block;
+    }
+  }
+}
+
+.slide-angle {
+  border-bottom: 500px solid #555;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+
+  .my-trade {
+    background: transparent;
+    position: absolute;
+    top: 60vh;
+    width: 400px;
+    max-width: 50vw;
+    right: 0;
+    color: white;
+
+    h2 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    ul {
+      list-style-type: circle;
+      list-style-position: inside;
+      //   padding: 10px 0 0 20px;
+
+      li {
+        font-size: 2rem;
+        padding: 5px 50px;
+        text-indent: -30px;
+        font-style: italic;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.area2 {
+  height: 100vh;
+  background: #555;
+
+  @media (max-width: @wideViewStart) {
+    // width: 98vw;
+    // padding: 0;
+    // box-sizing: border-box;
+    // margin: 0;
+  }
+}

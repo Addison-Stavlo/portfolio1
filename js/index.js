@@ -18,7 +18,7 @@
   }
 
   ctaBtn.addEventListener("click", () => {
-    window.scroll({ top: body.clientHeight, behavior: "smooth" });
+    window.scroll({ top: window.innerHeight, behavior: "smooth" });
   });
 
   //   document.onreadystatechange = () => {

@@ -222,6 +222,7 @@ body {
   height: 100vh;
 }
 #welcome .my-name {
+  display: none;
   font-family: serif;
   padding: 20vh 10vw;
   font-weight: bold;
@@ -298,7 +299,9 @@ body {
 }
 #projects {
   height: 100vh;
-  background: #555;
+  background: #555 url("../images/intro.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 @media (max-width: 1100px) {
 }

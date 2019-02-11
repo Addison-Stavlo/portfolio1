@@ -103,6 +103,7 @@ body {
   height: 100vh;
 
   .my-name {
+    display: none;
     font-family: serif;
     padding: 20vh 10vw;
     font-weight: bold;
@@ -192,7 +193,11 @@ body {
 
 #projects {
   height: 100vh;
-  background: #555;
+  //   width: 100%;
+  background: #555 url("../images/intro.svg");
+  //   background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 
   @media (max-width: @wideViewStart) {
     // width: 98vw;

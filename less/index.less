@@ -1,6 +1,7 @@
 @import "reset";
 @wideViewStart: 1100px;
 @charcoal: rgb(25, 25, 25, 1);
+
 html {
   font-size: 62.5%;
 }
@@ -29,11 +30,15 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  a,
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
 
-  div {
+  a {
     display: block;
     background: transparent;
-    color: white;
     font-size: 3rem;
     cursor: pointer;
     display: flex;
@@ -42,22 +47,22 @@ body {
     width: 80%;
     margin-top: 10px;
     padding: 10px 0;
-    a,
-    a:visited {
-      color: white;
-      text-decoration: none;
-    }
+    border-radius: 5px;
 
     &:hover {
-      background: lightgray;
-      color: @charcoal;
+      background: #555;
+      box-shadow: inset 0px 0px 15px 0px white;
+      background: white;
+      box-shadow: inset 0px 0px 45px 0px @charcoal;
       border: 1px solid @charcoal;
+      color: @charcoal;
     }
 
     &:active {
-      background: white;
+      box-shadow: inset 0px 0px 45px 0px #555;
     }
   }
+
   @media (max-width: @wideViewStart) {
     height: 60px;
     width: 100%;
@@ -67,12 +72,20 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
 
-    div {
+    a {
       margin: 0;
       width: auto;
-      padding: 10px;
+      padding: 5px 20px;
       font-size: 2rem;
       border-radius: 5px;
+      border: 1px solid #555;
+
+      &:hover {
+        box-shadow: inset 0px 0px 25px 0px @charcoal;
+      }
+      &:active {
+        box-shadow: inset 0px 0px 25px 0px #555;
+      }
     }
   }
 }
@@ -86,7 +99,7 @@ body {
   }
 }
 
-.area1 {
+#welcome {
   height: 100vh;
 
   .my-name {
@@ -115,6 +128,38 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+
+  .cta-btn {
+    display: none;
+    // display: inline-block;
+    position: absolute;
+
+    top: 50vh;
+    right: 30vw;
+
+    h2 {
+      font-size: 2.5rem;
+      padding: 10px 30px;
+      background: @charcoal;
+      color: white;
+      display: inline-block;
+      border: 1px solid white;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 150px;
+      text-align: center;
+
+      &:hover {
+        border: 1px solid @charcoal;
+        background: white;
+        box-shadow: inset 0px 0px 35px 0px @charcoal;
+        color: @charcoal;
+      }
+      &:active {
+        box-shadow: inset 0px 0px 35px 0px #555;
+      }
+    }
+  }
 
   .my-trade {
     background: transparent;
@@ -145,7 +190,7 @@ body {
   }
 }
 
-.area2 {
+#projects {
   height: 100vh;
   background: #555;
 

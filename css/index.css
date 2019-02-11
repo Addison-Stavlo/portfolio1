@@ -154,10 +154,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-.nav-bar div {
+.nav-bar a,
+.nav-bar a:visited {
+  color: white;
+  text-decoration: none;
+}
+.nav-bar a {
   display: block;
   background: transparent;
-  color: white;
   font-size: 3rem;
   cursor: pointer;
   display: flex;
@@ -166,19 +170,18 @@ body {
   width: 80%;
   margin-top: 10px;
   padding: 10px 0;
+  border-radius: 5px;
 }
-.nav-bar div a,
-.nav-bar div a:visited {
-  color: white;
-  text-decoration: none;
-}
-.nav-bar div:hover {
-  background: lightgray;
-  color: #191919;
-  border: 1px solid #191919;
-}
-.nav-bar div:active {
+.nav-bar a:hover {
+  background: #555;
+  box-shadow: inset 0px 0px 15px 0px white;
   background: white;
+  box-shadow: inset 0px 0px 45px 0px #191919;
+  border: 1px solid #191919;
+  color: #191919;
+}
+.nav-bar a:active {
+  box-shadow: inset 0px 0px 45px 0px #555;
 }
 @media (max-width: 1100px) {
   .nav-bar {
@@ -190,12 +193,19 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
   }
-  .nav-bar div {
+  .nav-bar a {
     margin: 0;
     width: auto;
-    padding: 10px;
+    padding: 5px 20px;
     font-size: 2rem;
     border-radius: 5px;
+    border: 1px solid #555;
+  }
+  .nav-bar a:hover {
+    box-shadow: inset 0px 0px 25px 0px #191919;
+  }
+  .nav-bar a:active {
+    box-shadow: inset 0px 0px 25px 0px #555;
   }
 }
 .main-container {
@@ -208,23 +218,23 @@ body {
     width: 100%;
   }
 }
-.area1 {
+#welcome {
   height: 100vh;
 }
-.area1 .my-name {
+#welcome .my-name {
   font-family: serif;
   padding: 20vh 10vw;
   font-weight: bold;
   width: 50%;
 }
-.area1 .my-name h1 {
+#welcome .my-name h1 {
   display: inline-block;
   font-size: 5rem;
 }
-.area1 .my-name .last-name {
+#welcome .my-name .last-name {
   padding-left: 10px;
 }
-.area1 .my-name p {
+#welcome .my-name p {
   font-size: 1.6rem;
   padding-left: 90px;
 }
@@ -234,6 +244,33 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+}
+.slide-angle .cta-btn {
+  display: none;
+  position: absolute;
+  top: 50vh;
+  right: 30vw;
+}
+.slide-angle .cta-btn h2 {
+  font-size: 2.5rem;
+  padding: 10px 30px;
+  background: #191919;
+  color: white;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+}
+.slide-angle .cta-btn h2:hover {
+  border: 1px solid #191919;
+  background: white;
+  box-shadow: inset 0px 0px 35px 0px #191919;
+  color: #191919;
+}
+.slide-angle .cta-btn h2:active {
+  box-shadow: inset 0px 0px 35px 0px #555;
 }
 .slide-angle .my-trade {
   background: transparent;
@@ -259,7 +296,7 @@ body {
   font-style: italic;
   font-weight: normal;
 }
-.area2 {
+#projects {
   height: 100vh;
   background: #555;
 }

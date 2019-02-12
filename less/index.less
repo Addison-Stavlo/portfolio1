@@ -102,7 +102,8 @@ body {
 }
 
 #welcome {
-  height: 100vh;
+  // min-height: 500px;
+  min-height: 100vh;
 
   .my-name {
     display: none;
@@ -173,6 +174,16 @@ body {
         box-shadow: inset 0px 0px 35px 0px #555;
       }
     }
+    @media (max-width: @wideViewStart) {
+      right: 40vw;
+    }
+    @media @mobile {
+      right: 100px;
+      h2 {
+        font-size: 2rem;
+        padding: 5px 10px;
+      }
+    }
   }
 
   .my-trade {
@@ -218,7 +229,7 @@ body {
 }
 
 #projects {
-  height: 100vh;
+  min-height: 100vh;
   background: #555 url("../images/line-white.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -233,10 +244,16 @@ body {
       padding-top: 100px;
     }
   }
+  @media @mobile {
+    h1 {
+      font-size: 3rem;
+      padding: 75px 0 0 30px;
+    }
+  }
 }
 
 #contact {
-  height: 100vh;
+  min-height: 100vh;
   background: white url("../images/line-char.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -249,6 +266,12 @@ body {
   @media (max-width: @wideViewStart) {
     h1 {
       padding-top: 100px;
+    }
+  }
+  @media @mobile {
+    h1 {
+      font-size: 3rem;
+      padding: 75px 0 0 30px;
     }
   }
 }

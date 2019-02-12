@@ -220,7 +220,7 @@ body {
   }
 }
 #welcome {
-  height: 100vh;
+  min-height: 100vh;
 }
 #welcome .my-name {
   display: none;
@@ -282,6 +282,20 @@ body {
 .slide-angle .cta-btn h2:active {
   box-shadow: inset 0px 0px 35px 0px #555;
 }
+@media (max-width: 1100px) {
+  .slide-angle .cta-btn {
+    right: 40vw;
+  }
+}
+@media (max-width: 500px) {
+  .slide-angle .cta-btn {
+    right: 100px;
+  }
+  .slide-angle .cta-btn h2 {
+    font-size: 2rem;
+    padding: 5px 10px;
+  }
+}
 .slide-angle .my-trade {
   background: transparent;
   position: absolute;
@@ -320,7 +334,7 @@ body {
   }
 }
 #projects {
-  height: 100vh;
+  min-height: 100vh;
   background: #555 url("../images/line-white.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -335,8 +349,14 @@ body {
     padding-top: 100px;
   }
 }
+@media (max-width: 500px) {
+  #projects h1 {
+    font-size: 3rem;
+    padding: 75px 0 0 30px;
+  }
+}
 #contact {
-  height: 100vh;
+  min-height: 100vh;
   background: white url("../images/line-char.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -349,5 +369,11 @@ body {
 @media (max-width: 1100px) {
   #contact h1 {
     padding-top: 100px;
+  }
+}
+@media (max-width: 500px) {
+  #contact h1 {
+    font-size: 3rem;
+    padding: 75px 0 0 30px;
   }
 }

@@ -1,5 +1,4 @@
 {
-  const triangle = document.querySelector(".slide-angle");
   const body = document.querySelector("body");
   const navBar = document.querySelector(".nav-bar");
   const slideAngle = document.querySelector(".slide-angle");
@@ -7,13 +6,19 @@
   const myTrade = document.querySelector(".my-trade");
   const ctaBtn = document.querySelector(".cta-btn");
   const wideViewStart = 1100;
+  const minHeight = 500;
 
-  function setSlideWidth() {
+  function setSlideDimensions() {
     if (window.innerWidth >= wideViewStart) {
-      triangle.style.borderLeft = `${body.clientWidth *
+      slideAngle.style.borderLeft = `${body.clientWidth *
         0.7}px solid transparent`;
     } else {
-      triangle.style.borderLeft = `${body.clientWidth}px solid transparent`;
+      slideAngle.style.borderLeft = `${body.clientWidth}px solid transparent`;
+    }
+    if (window.innerHeight <= minHeight) {
+      slideAngle.style.borderBottom = `${window.innerHeight}px solid #555`;
+    } else {
+      slideAngle.style.borderBottom = `${window.innerHeight}px solid #555`;
     }
   }
 
@@ -24,8 +29,8 @@
   //   document.onreadystatechange = () => {
   //   };
   window.onload = () => {
-    setSlideWidth();
-    triangle.style.borderBottom = `${window.innerHeight}px solid #555`;
+    setSlideDimensions();
+    // slideAngle.style.borderBottom = `${window.innerHeight}px solid #555`;
     TweenMax.from(navBar, 1.2, {
       y: -5000,
       ease: Sine.easeOut,
@@ -46,7 +51,7 @@
   };
 
   window.onresize = () => {
-    setSlideWidth();
-    triangle.style.borderBottom = `${window.innerHeight}px solid #555`;
+    setSlideDimensions();
+    // slideAngle.style.borderBottom = `${window.innerHeight}px solid #555`;
   };
 }

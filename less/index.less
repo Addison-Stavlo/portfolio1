@@ -8,23 +8,21 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-family: sans-serif;
   box-sizing: border-box;
   font-size: 16px;
   min-height: 100vh;
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
+  color: lightblue;
 
   @media (max-width: @wideViewStart) {
     flex-direction: column;
   }
 }
 a {
-  color: lightblue;
-  font-weight: bold;
-}
-a:visited {
-  color: lightpink;
+  color: white;
   font-weight: bold;
 }
 
@@ -76,13 +74,13 @@ a:visited {
       background: #555;
       box-shadow: inset 0px 0px 15px 0px white;
       background: white;
-      box-shadow: inset 0px 0px 45px 0px @charcoal;
+      box-shadow: inset 0px 0px 45px 0px lightblue;
       border: 1px solid @charcoal;
       color: @charcoal;
     }
 
     &:active {
-      box-shadow: inset 0px 0px 45px 0px #555;
+      box-shadow: inset 0px 0px 45px 0px lightpink;
     }
   }
 
@@ -103,6 +101,7 @@ a:visited {
         height: 30px;
       }
     }
+
     .page-link {
       margin: 0;
       width: auto;
@@ -112,10 +111,10 @@ a:visited {
       border: 1px solid #555;
 
       &:hover {
-        box-shadow: inset 0px 0px 25px 0px @charcoal;
+        box-shadow: inset 0px 0px 25px 0px lightblue;
       }
       &:active {
-        box-shadow: inset 0px 0px 25px 0px #555;
+        box-shadow: inset 0px 0px 25px 0px lightpink;
       }
     }
   }
@@ -144,11 +143,11 @@ a:visited {
 
 #welcome {
   // min-height: 500px;
+  color: black;
   min-height: 100vh;
 
   .my-name {
     display: none;
-    font-family: serif;
     padding: 20vh 10vw;
     font-weight: bold;
     width: 50%;
@@ -208,11 +207,11 @@ a:visited {
       &:hover {
         border: 1px solid @charcoal;
         background: white;
-        box-shadow: inset 0px 0px 35px 0px @charcoal;
+        box-shadow: inset 0px 0px 35px 0px lightblue;
         color: @charcoal;
       }
       &:active {
-        box-shadow: inset 0px 0px 35px 0px #555;
+        box-shadow: inset 0px 0px 35px 0px lightpink;
       }
     }
     @media (max-width: @wideViewStart) {
@@ -234,7 +233,7 @@ a:visited {
     width: 400px;
     max-width: 50vw;
     right: 0;
-    color: white;
+    color: lightblue;
 
     h2 {
       font-size: 4rem;
@@ -285,6 +284,7 @@ a:visited {
     color: white;
     padding: 50px 0 10px 100px;
     align-self: flex-start;
+    margin-bottom: 20px;
   }
 
   .projects-holder {
@@ -322,11 +322,11 @@ a:visited {
         h2 {
           padding: 20px 0 10px;
           font-size: 2rem;
-          color: white;
+          // color: white;
         }
         p {
           padding: 0 10px 10px 20px;
-          color: white;
+          // color: white;
         }
       }
     }
@@ -349,11 +349,43 @@ a:visited {
   background: white url("../images/line-char.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
 
   h1 {
     color: @charcoal;
     font-size: 5rem;
     padding: 50px 0 0 100px;
+    align-self: flex-start;
+    margin-bottom: 20px;
+  }
+  .contacts-holder {
+    border: 2px solid black;
+    background: rgba(25, 25, 25, 0.7);
+    border-radius: 10px;
+    width: 800px;
+    max-width: 90vw;
+    min-height: 700px;
+    margin: 0 auto;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: space-evenly;
+
+    .contact-type {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin-right: 20px;
+      }
+    }
   }
   @media (max-width: @wideViewStart) {
     h1 {

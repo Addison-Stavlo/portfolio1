@@ -131,12 +131,14 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  font-family: sans-serif;
   box-sizing: border-box;
   font-size: 16px;
   min-height: 100vh;
   display: flex;
   align-items: stretch;
   justify-content: flex-end;
+  color: lightblue;
 }
 @media (max-width: 1200px) {
   body {
@@ -144,11 +146,7 @@ body {
   }
 }
 a {
-  color: lightblue;
-  font-weight: bold;
-}
-a:visited {
-  color: lightpink;
+  color: white;
   font-weight: bold;
 }
 .nav-bar {
@@ -195,12 +193,12 @@ a:visited {
   background: #555;
   box-shadow: inset 0px 0px 15px 0px white;
   background: white;
-  box-shadow: inset 0px 0px 45px 0px #191919;
+  box-shadow: inset 0px 0px 45px 0px lightblue;
   border: 1px solid #191919;
   color: #191919;
 }
 .nav-bar .page-link:active {
-  box-shadow: inset 0px 0px 45px 0px #555;
+  box-shadow: inset 0px 0px 45px 0px lightpink;
 }
 @media (max-width: 1200px) {
   .nav-bar {
@@ -229,10 +227,10 @@ a:visited {
     border: 1px solid #555;
   }
   .nav-bar .page-link:hover {
-    box-shadow: inset 0px 0px 25px 0px #191919;
+    box-shadow: inset 0px 0px 25px 0px lightblue;
   }
   .nav-bar .page-link:active {
-    box-shadow: inset 0px 0px 25px 0px #555;
+    box-shadow: inset 0px 0px 25px 0px lightpink;
   }
 }
 @media (max-width: 500px) {
@@ -257,11 +255,11 @@ a:visited {
   }
 }
 #welcome {
+  color: black;
   min-height: 100vh;
 }
 #welcome .my-name {
   display: none;
-  font-family: serif;
   padding: 20vh 10vw;
   font-weight: bold;
   width: 50%;
@@ -313,11 +311,11 @@ a:visited {
 .slide-angle .cta-btn h2:hover {
   border: 1px solid #191919;
   background: white;
-  box-shadow: inset 0px 0px 35px 0px #191919;
+  box-shadow: inset 0px 0px 35px 0px lightblue;
   color: #191919;
 }
 .slide-angle .cta-btn h2:active {
-  box-shadow: inset 0px 0px 35px 0px #555;
+  box-shadow: inset 0px 0px 35px 0px lightpink;
 }
 @media (max-width: 1200px) {
   .slide-angle .cta-btn {
@@ -340,7 +338,7 @@ a:visited {
   width: 400px;
   max-width: 50vw;
   right: 0;
-  color: white;
+  color: lightblue;
 }
 .slide-angle .my-trade h2 {
   font-size: 4rem;
@@ -386,6 +384,7 @@ a:visited {
   color: white;
   padding: 50px 0 10px 100px;
   align-self: flex-start;
+  margin-bottom: 20px;
 }
 #projects .projects-holder {
   border: 1px solid white;
@@ -419,11 +418,9 @@ a:visited {
 #projects .projects-holder .project .project-content h2 {
   padding: 20px 0 10px;
   font-size: 2rem;
-  color: white;
 }
 #projects .projects-holder .project .project-content p {
   padding: 0 10px 10px 20px;
-  color: white;
 }
 @media (max-width: 1200px) {
   #projects h1 {
@@ -441,11 +438,40 @@ a:visited {
   background: white url("../images/line-char.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
 }
 #contact h1 {
   color: #191919;
   font-size: 5rem;
   padding: 50px 0 0 100px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+#contact .contacts-holder {
+  border: 2px solid black;
+  background: rgba(25, 25, 25, 0.7);
+  border-radius: 10px;
+  width: 800px;
+  max-width: 90vw;
+  min-height: 700px;
+  margin: 0 auto;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  justify-content: space-evenly;
+}
+#contact .contacts-holder .contact-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact .contacts-holder .contact-type img {
+  margin-right: 20px;
 }
 @media (max-width: 1200px) {
   #contact h1 {

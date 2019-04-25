@@ -293,6 +293,7 @@ a {
 .slide-angle .cta-btn {
   display: none;
   position: absolute;
+  font-weight: normal;
   top: 50vh;
   right: 30vw;
 }

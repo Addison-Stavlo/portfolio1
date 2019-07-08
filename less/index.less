@@ -40,7 +40,7 @@ a {
   align-items: center;
 
   .prof-links {
-    width: 120px;
+    width: 200px;
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -48,6 +48,12 @@ a {
 
     img {
       height: 50px;
+      padding: 0 5px;
+    }
+
+    .anb-logo {
+      height: 80px;
+      margin-top: -5px;
     }
   }
 
@@ -92,13 +98,19 @@ a {
     z-index: 100;
     flex-direction: row;
     justify-content: space-evenly;
+    // flex-wrap: wrap;
 
     .prof-links {
+      justify-self: flex-start;
       position: relative;
-      top: 0;
-      width: 80px;
+      top: 5px;
+      width: 120px;
       img {
         height: 30px;
+      }
+      .anb-logo {
+        margin-top: -3px;
+        height: 50px;
       }
     }
 
@@ -120,14 +132,24 @@ a {
   }
 
   @media @mobile {
+    // flex-direction: column;
+    padding: 0;
+    justify-content: flex-start;
     .prof-links {
-      width: 55px;
+      width: 120px;
+      left: 0px;
       img {
         height: 25px;
       }
+      .anb-logo {
+        margin-top: -1px;
+        height: 40px;
+      }
     }
     .page-link {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
+      padding: 5px;
+      margin: 0 2px;
     }
   }
 }
